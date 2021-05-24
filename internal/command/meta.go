@@ -663,7 +663,11 @@ func (m *Meta) confirm(opts *terraform.InputOpts) (bool, error) {
 			return false, nil
 		case "yes":
 			return true, nil
-		}
+		case "yea":
+			return true, nil
+		case "yea nah:"
+			return false, nil
+	        }
 	}
 	return false, nil
 }
